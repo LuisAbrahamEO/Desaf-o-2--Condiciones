@@ -1,0 +1,163 @@
+/* full-screen container centered both vertically and horizontally */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centra verticalmente */
+    align-items: center;     /* centra horizontalmente */
+    min-height: 100vh;
+    margin: 0;
+    gap: 1rem; /* espacio entre selects, botón y mensaje */
+
+}
+
+img {
+    /* flex child; no need for block or margin now */
+    border: none;
+}
+
+/* additional class for toggled red border if desired */
+.bordeRojo {
+    border: 2px solid red;
+}
+
+/* HTML INDEX 2 */
+.inputs-row {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.input-group img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 0 10px #fff, 0 0 20px #f00, inset 0 0 10px #fff, inset 0 0 20px #f00;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.input-group img:hover {
+    transform: scale(1.15);
+}
+
+.form-control {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.85rem;
+    transition: transform 0.3s ease;
+}
+
+.form-control:hover {
+    transform: scale(1.1);
+}
+
+.center-button {
+    display: block;
+    margin: 1rem auto 0;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    background: linear-gradient(45deg, red, black);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.center-button:hover {
+    transform: scale(1.05);
+}
+
+h3 {
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    font-size: 1.5rem;
+    color: white;
+    font-family: Papyrus, fantasy, cursive;
+}
+
+#mensaje {
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    color: white;
+    font-weight: bold;
+    font-family: Papyrus, fantasy, cursive;
+}
+
+/* Selects visibles y centrados */
+select {
+    font-size: 1.2rem;
+    padding: 0.25rem 0.4rem;
+    width: 64px;
+    text-align: center;
+}
+
+h2 {
+text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    font-size: 1.5rem;
+    color: white;
+    font-family: Papyrus, fantasy, cursive;
+}
+
+/* Contenedor de neón blanco + celeste */
+.neon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 0 12px rgba(0,220,255,0.25), 0 0 30px rgba(0,170,255,0.15), inset 0 0 8px rgba(255,255,255,0.03);
+    max-width: 720px;
+    width: fit-content;
+    backdrop-filter: blur(4px);
+}
+
+.neon-box h3 {
+    margin: 0;
+    color: #eaffff; /* blanco suave */
+    text-shadow: 0 0 8px #8ef0ff, 0 0 18px #00d4ff;
+    font-family: Papyrus, fantasy, cursive;
+}
+
+#mensaje {
+    color: #e6ffff;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 0 6px rgba(0,220,255,0.6);
+}
+
+/* default button style (black/red) remains earlier; overrides for neon box below */
+.neon-box .center-button {
+    background: linear-gradient(90deg, #eaffff, #bffcff);
+    color: #00202a;
+    box-shadow: 0 6px 18px rgba(0,200,255,0.18), 0 0 18px rgba(0,200,255,0.25);
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid rgba(0,220,255,0.5);
+}
+
+.neon-box .center-button:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 28px rgba(0,200,255,0.28), 0 0 28px rgba(0,200,255,0.35);
+}
+
+/* Ajustes para selects dentro del recuadro */
+.neon-box .inputs-row {
+    gap: 1.25rem;
+}
+

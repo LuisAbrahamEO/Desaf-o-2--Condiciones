@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background: url('img/itachi2.jpg') center/cover no-repeat;">
+
+<div>
+
+<div>
+        <h3 style="text-align:center; margin-top:2.5rem; margin-bottom:2.5rem;">Puedes llevar hasta 10 stickers en total</h3>
+    </div>
+
+    <div class="inputs-row">
+        <div class="input-group">
+            <img src="img/Bleach.jpg" alt="Bleach">
+            <input class="form-control" type="number" id="inputNum1" min="0" value="0">
+        </div>
+        <div class="input-group">
+            <img src="img/kenchin.jpg" alt="Kenchin">
+            <input class="form-control" type="number" id="inputNum2" min="0" value="0">
+        </div>
+        <div class="input-group">
+            <img src="img/shohoku.webp" alt="Shohoku">
+            <input class="form-control" type="number" id="inputNum3" min="0" value="0">
+        </div>
+    </div>
+
+    <div id="mensaje" style="text-align:center; margin-top:2.5rem; margin-bottom:2.5rem;"></div>
+    <button class="center-button"
+onclick="
+let num1 = parseInt(document.querySelector('#inputNum1').value);
+let num2 = parseInt(document.querySelector('#inputNum2').value);
+let num3 = parseInt(document.querySelector('#inputNum3').value);
+
+let resultado = num1+num2+num3;
+
+if(resultado > 10){
+ document.querySelector('#mensaje').textContent = 'Llevas demasiados stickers';
+} 
+else if(resultado == 0){
+    document.querySelector('#mensaje').textContent = 'Por favor selecciona al menos un sticker';
+}
+else if(resultado < 10){
+    document.querySelector('#mensaje').textContent = 'Puedes llevar mas stickers';
+}
+else if(resultado == 10){
+    document.querySelector('#mensaje').textContent = 'Llevas la cantidad maxima de stickers';
+}
+else {
+    document.querySelector('#mensaje').textContent = '';
+}
+"
+>Verificar</button>
+
+</div>
+
+
+</body>
+</html>

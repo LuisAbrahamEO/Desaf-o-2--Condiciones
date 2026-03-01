@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background: url('img/binario.webp') center/cover no-repeat;">
+    <div class="neon-box">
+        <h3>Ingresar Password</h3>
+        <div id="mensaje"></div>
+
+        <div class="inputs-row">
+    <div class="input-group">
+        <select name="num1" id="num1" class="form-control">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+    </div>
+    <div class="input-group">
+        <select name="num2" id="num2" class="form-control">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+    </div>
+    <div class="input-group">
+        <select name="num3" id="num3" class="form-control">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+    </div>
+</div>
+        <button class="center-button" onclick="
+    let contraseña1 = '911';
+    let contraseña2 = '714';
+    let opcion = document.querySelector('#num1').value;
+    let opcion2 = document.querySelector('#num2').value;
+    let opcion3 = document.querySelector('#num3').value;
+    let codigo = opcion + opcion2 + opcion3;
+
+    if (codigo === contraseña1 || codigo === contraseña2) {
+        document.querySelector('#mensaje').textContent = 'Contraseña correcta';
+    } else if (codigo === '000') {
+        document.querySelector('#mensaje').textContent = 'Por favor selecciona una contraseña';
+    }else {
+        document.querySelector('#mensaje').textContent = 'Contraseña incorrecta';
+    }
+">Ingresar</button>
+    </div>
+
+    </div>
+    
+
+
+    
+</body>
+</html>
