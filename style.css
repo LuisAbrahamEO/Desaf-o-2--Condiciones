@@ -161,3 +161,23 @@ text-align: center;
     gap: 1.25rem;
 }
 
+/* Pagination links (used in index2) */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.pagination-link {
+    color: rgb(233, 229, 229);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid rgb(239, 231, 231);
+    border-radius: 4px;
+    transition: background 0.2s ease;
+}
+.pagination-link:hover {
+    background: rgba(255,0,0,0.1);
+}
+
